@@ -6,6 +6,7 @@ import About from "@/app/about/page";
 import Contact from "@/app/contact/page";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import Shop from "@/app/shop/page";
 
 describe("Home", () => {
 	it("renders a heading", () => {
@@ -45,3 +46,15 @@ describe("Contact", () => {
 	});
 });
 
+describe("Shop", () => {
+	it("renders contact heading", () => {
+		render(<Shop />);
+		const heading = screen.getByRole("heading", { level: 1 });
+		expect(heading).toHaveTextContent("Shop");
+	});
+	it("renders home link", () => {
+		render(<Contact />);
+		const link = screen.getByRole("link", { name: "Back to Home" });
+		expect(link).toHaveAttribute("href", "/");
+	});
+});
