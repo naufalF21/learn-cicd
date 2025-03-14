@@ -5,6 +5,7 @@ import Home from "@/app/page";
 import About from "@/app/about/page";
 import Contact from "@/app/contact/page";
 import { render } from "@testing-library/react";
+import Shop from "@/app/shop/page";
 
 it("renders homepage unchanged", () => {
 	const { container } = render(<Home />);
@@ -18,6 +19,11 @@ it("renders about page unchanged", () => {
 
 it("renders contact page unchanged", () => {
 	const { container } = render(<Contact />);
+	expect(container).toMatchSnapshot();
+});
+
+it("renders contact page unchanged", () => {
+	const { container } = render(<Shop />);
 	expect(container).toMatchSnapshot();
 });
 
