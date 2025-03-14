@@ -23,3 +23,4 @@ describe("About", () => {
 		expect(aboutElement).toBeInTheDocument();
 	});
 });
+

@@ -14,3 +14,4 @@ it("renders about page unchanged", () => {
 	const { container } = render(<About />);
 	expect(container).toMatchSnapshot();
 });
+
