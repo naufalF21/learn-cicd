@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"test:ci": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadless"
+		"test:ci": "next test --no-watch --no-progress --code-coverage --browsers=ChromeHeadless"
 	},
 	"dependencies": {
 		"next": "15.2.2",
