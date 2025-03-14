@@ -44,3 +44,4 @@ describe("Contact", () => {
 		expect(link).toHaveAttribute("href", "/");
 	});
 });
+

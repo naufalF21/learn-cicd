@@ -20,3 +20,4 @@ it("renders contact page unchanged", () => {
 	const { container } = render(<Contact />);
 	expect(container).toMatchSnapshot();
 });
+
