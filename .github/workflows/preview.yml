@@ -9,10 +9,23 @@ on:
             - master
 
 jobs:
-    Deploy-Preview:
+    Test:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - run: npm ci
+
+            - run: npm run test:ci
+    Deploy-Preview:
+        needs: [Test]
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
 
             - name: Install Vercel CLI
               run: npm install --global vercel@latest
