@@ -5,8 +5,11 @@ env:
 
 on:
     push:
-        branches-ignore:
-            - master
+        branches:
+            - develop
+    pull_request:
+        branches:
+            - develop
 
 jobs:
     Test:
