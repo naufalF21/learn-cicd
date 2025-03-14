@@ -26,3 +26,4 @@ it("renders contact page unchanged", () => {
 	const { container } = render(<Shop />);
 	expect(container).toMatchSnapshot();
 });
+

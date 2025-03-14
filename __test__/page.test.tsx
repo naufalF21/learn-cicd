@@ -58,3 +58,4 @@ describe("Shop", () => {
 		expect(link).toHaveAttribute("href", "/");
 	});
 });
+

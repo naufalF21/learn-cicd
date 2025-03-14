@@ -14,6 +14,7 @@ export default function Home() {
 				<li>
 					<Link href="/shop">Shop</Link>
 				</li>
+
 			</ul>
 		</div>
 	);
